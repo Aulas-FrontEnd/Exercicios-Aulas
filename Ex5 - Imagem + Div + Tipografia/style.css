@@ -36,12 +36,21 @@
   }
 
   .nav-links{
+    background-color: #ffc72c;
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    width: 50%;
-    gap: 3rem;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    padding: 3rem 1rem;
+    width: 200px;
+    height: 100vh;
+    z-index: 100;
+    gap: 1rem; 
+
   }
     .nav-links a {
       text-decoration: none; /* retirando o sublinhado do link */
@@ -53,6 +62,13 @@
       transition: border 0.5s ease;
     }
 
+    .nav-links.show{
+      display: flex;
+    }
+
+    .fa-solid.icon-close{
+      display: none;
+    }
   
   /* Hero */
   .hero {
@@ -139,9 +155,10 @@
   .painel{
     margin-top: 3rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     flex-wrap: wrap;
+    padding: 0 1rem;
   }
 
   .card {
@@ -168,11 +185,11 @@
   background-color: #ffc72c;
   color: #1D428A;
   padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   text-align: center;
-  z-index: 100;
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-content {
@@ -197,7 +214,20 @@
 }
 
 @media screen and (min-width: 768px) {
+  .nav-links{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20%;
+    position: static;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+  }
   .card{
     width: 30%;
+  }
+
+  .menu-toggle{
+    display: none;
   }
 }
