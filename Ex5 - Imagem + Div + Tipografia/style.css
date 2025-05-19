@@ -159,6 +159,7 @@
     width: 100%;
     flex-wrap: wrap;
     padding: 0 1rem;
+    gap: 1rem;
   }
 
   .card {
