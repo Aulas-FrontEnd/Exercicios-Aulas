@@ -222,6 +222,7 @@
     height: auto;
     background-color: transparent;
     padding: 0;
+    display: flex;
   }
   .card{
     width: 30%;
