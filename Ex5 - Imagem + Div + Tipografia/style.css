@@ -165,7 +165,7 @@
     background-color: #ffc72c;
     font-weight: bold;
     color: white;
-    margin: .75rem; /* 0.75rem = 12px */
+    margin: .75rem 0; /* 0.75rem = 12px */
     padding: 1em;
     text-align: center;
     display: flex;
